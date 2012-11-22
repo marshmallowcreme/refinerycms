@@ -248,7 +248,7 @@ module Refinery
     end
 
     def url_marketable
-      Refinery.deprecate "Refinery::Page#url_marketable", :when => '2.2'
+      Refinery.deprecate "Refinery::Page#url_marketable", :when => '2.2', :replacement => "Refinery::Pages::Url::Marketable#url"
       Refinery::Pages::Url::Marketable.new(self).url
     end
 
